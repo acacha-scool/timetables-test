@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5949f059fc141f6356374a279ed86a90",
+    "content-hash": "bab30210f6b2fba9b00cda6d66fbfa7c",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -179,6 +179,113 @@
                 "laravel"
             ],
             "time": "2017-06-20T13:28:48+00:00"
+        },
+        {
+            "name": "acacha/l5-repository",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../../acacha/l5-repository",
+                "reference": "bd5b83789130f7d4011baa1574f0a4b2587ef7f0",
+                "shasum": null
+            },
+            "require": {
+                "laravel/framework": "^5.3",
+                "prettus/laravel-validation": "1.1.*"
+            },
+            "suggest": {
+                "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
+                "robclancy/presenter": "Required to use the Presenter Model (1.3.*)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prettus\\Repository\\": "src/Prettus/Repository/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anderson Andrade",
+                    "email": "contato@andersonandra.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel 5 - Repositories to the database layer. Based on prettus/l5-repository",
+            "keywords": [
+                "acacha",
+                "cache",
+                "eloquent",
+                "laravel",
+                "model",
+                "repository"
+            ],
+            "support": {
+                "email": "sergiturbadenas@gmail.com",
+                "issues": "https://github.com/acacha/l5-repository/issues",
+                "wiki": "https://github.com/acacha/l5-repository",
+                "source": "https://github.com/acacha/l5-repository"
+            }
+        },
+        {
+            "name": "acacha/stateful-eloquent",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../../acacha/stateful-eloquent",
+                "reference": "f6754943900ca2dcbcfb43d6e02e2c6316dd4865",
+                "shasum": null
+            },
+            "require": {
+                "laravel/framework": "~5.3",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\Stateful\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Acacha\\Stateful\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Rice",
+                    "email": "mike.hj.rice@gmail.com"
+                },
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com"
+                }
+            ],
+            "description": "State machines for Eloquent classes",
+            "homepage": "https://github.com/mikerice/stateful-eloquent",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "statemachine"
+            ]
         },
         {
             "name": "acacha/user",
@@ -831,6 +938,56 @@
             "time": "2017-06-15T17:19:42+00:00"
         },
         {
+            "name": "fzaninotto/faker",
+            "version": "v1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
+                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "^4.0 || ^5.0",
+                "squizlabs/php_codesniffer": "^1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2017-08-15T16:48:10+00:00"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -966,16 +1123,16 @@
         },
         {
             "name": "laravel/dusk",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/dusk.git",
-                "reference": "7f75d602dd6d59311ff46777eff44fa14d39e5af"
+                "reference": "5e0ceaa27c9a78897f201a26f176b23bef20210f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/dusk/zipball/7f75d602dd6d59311ff46777eff44fa14d39e5af",
-                "reference": "7f75d602dd6d59311ff46777eff44fa14d39e5af",
+                "url": "https://api.github.com/repos/laravel/dusk/zipball/5e0ceaa27c9a78897f201a26f176b23bef20210f",
+                "reference": "5e0ceaa27c9a78897f201a26f176b23bef20210f",
                 "shasum": ""
             },
             "require": {
@@ -1023,20 +1180,20 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2017-08-28T10:03:58+00:00"
+            "time": "2017-09-06T13:19:28+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.2",
+            "version": "v5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "65da63c8ad4836e2bcddcff75becd49c71c5041c"
+                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/65da63c8ad4836e2bcddcff75becd49c71c5041c",
-                "reference": "65da63c8ad4836e2bcddcff75becd49c71c5041c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/779a98d3b2ebed2128db1a668dcc10a65c9b01be",
+                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be",
                 "shasum": ""
             },
             "require": {
@@ -1155,7 +1312,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-09-04T14:09:04+00:00"
+            "time": "2017-09-07T13:50:21+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1639,6 +1796,46 @@
             "time": "2017-03-13T16:27:32+00:00"
         },
         {
+            "name": "prettus/laravel-validation",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andersao/laravel-validator.git",
+                "reference": "d9eb401fb3518a890b117e83bd25a4109fcdb704"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/d9eb401fb3518a890b117e83bd25a4109fcdb704",
+                "reference": "d9eb401fb3518a890b117e83bd25a4109fcdb704",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.4",
+                "illuminate/validation": "~5.4",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Prettus\\Validator\\": "src/Prettus/Validator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anderson Andrade",
+                    "email": "contato@andersonandra.de"
+                }
+            ],
+            "description": "Laravel Validation Service",
+            "keywords": [
+                "laravel",
+                "service",
+                "validation"
+            ],
+            "time": "2017-08-28T23:28:32+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -1936,6 +2133,215 @@
                 "uuid"
             ],
             "time": "2017-08-04T13:39:04+00:00"
+        },
+        {
+            "name": "scool/curriculum",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../curriculum/curriculum",
+                "reference": "5c304bd7eceb663ca257ca9d54eb703c9cf91c4f",
+                "shasum": null
+            },
+            "require": {
+                "acacha/l5-repository": "dev-master",
+                "acacha/stateful-eloquent": "dev-master",
+                "fzaninotto/faker": "^1.6",
+                "laravel/framework": "^5.3",
+                "scool/foundation": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.6",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Scool\\Curriculum\\Providers\\CurriculumServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Scool\\Curriculum\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Scool\\Curriculum\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com"
+                }
+            ],
+            "description": "Curriculum module for scool package",
+            "keywords": [
+                "curriculum",
+                "laravel",
+                "scool"
+            ]
+        },
+        {
+            "name": "scool/foundation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha-scool/foundation.git",
+                "reference": "4a41aeddceb25fa958c12f7d16187e0d319dc471"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha-scool/foundation/zipball/4a41aeddceb25fa958c12f7d16187e0d319dc471",
+                "reference": "4a41aeddceb25fa958c12f7d16187e0d319dc471",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.5",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Scool\\Foundation\\Providers\\FoundationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Scool\\Foundation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Foundation classes for Scool",
+            "homepage": "https://github.com/acacha-scool/foundation",
+            "keywords": [
+                "Scool",
+                "foundation"
+            ],
+            "time": "2017-09-07T12:27:05+00:00"
+        },
+        {
+            "name": "scool/timetables",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../timetables",
+                "reference": "823e99a942983242770f272994a0f9bb5a76d628",
+                "shasum": null
+            },
+            "require": {
+                "acacha/l5-repository": "dev-master",
+                "acacha/stateful-eloquent": "dev-master",
+                "laravel/framework": "^5.3",
+                "php": "~5.6|~7.0",
+                "scool/curriculum": "dev-master",
+                "scool/foundation": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Scool\\Timetables\\Providers\\TimetablesServiceProvider"
+                    ],
+                    "aliases": {
+                        "ScoolStaff": "Scool\\Timetables\\Timetables"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Scool\\Timetables\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Scool\\Timetables\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Timetables module for scool",
+            "homepage": "https://github.com/scool/timetables",
+            "keywords": [
+                "scool",
+                "timetables"
+            ]
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3064,56 +3470,6 @@
                 "zf2"
             ],
             "time": "2017-08-03T18:23:40+00:00"
-        },
-        {
-            "name": "fzaninotto/faker",
-            "version": "v1.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
-                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0"
-            },
-            "require-dev": {
-                "ext-intl": "*",
-                "phpunit/phpunit": "^4.0 || ^5.0",
-                "squizlabs/php_codesniffer": "^1.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Faker\\": "src/Faker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "time": "2017-08-15T16:48:10+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4623,7 +4979,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "scool/timetables": 20,
+        "scool/curriculum": 20,
+        "acacha/l5-repository": 20,
+        "scool/foundation": 20,
+        "acacha/stateful-eloquent": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

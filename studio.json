@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "paths": [
+        "../timetables",
+        "../../curriculum/curriculum",
+        "../../../acacha-scool/foundation",
+        "../../../acacha/l5-repository",
+        "../../../acacha/stateful-eloquent"
+    ]
+}
