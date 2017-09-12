@@ -16,7 +16,8 @@
         "scool/curriculum": "dev-master",
         "acacha/l5-repository": "dev-master",
         "scool/foundation": "dev-master",
-        "acacha/stateful-eloquent": "dev-master"
+        "acacha/stateful-eloquent": "dev-master",
+        "scool/ebre_escool_model": "dev-master"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

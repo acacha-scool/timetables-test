@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bab30210f6b2fba9b00cda6d66fbfa7c",
+    "content-hash": "33f18acb31508f05ef3b02e364703b70",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -2203,6 +2203,67 @@
                 "curriculum",
                 "laravel",
                 "scool"
+            ]
+        },
+        {
+            "name": "scool/ebre_escool_model",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../../scool/ebre_escool_model",
+                "reference": "289bbf4846e23076deb3e552c4c7bd83f7feec18",
+                "shasum": null
+            },
+            "require": {
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scool\\EbreEscoolModel\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Scool\\EbreEscoolModel\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel model for old ebre_escool database",
+            "homepage": "https://github.com/acacha/ebre_escool_mdel",
+            "keywords": [
+                "Scool",
+                "ebre_escool_model"
             ]
         },
         {
@@ -4984,7 +5045,8 @@
         "scool/curriculum": 20,
         "acacha/l5-repository": 20,
         "scool/foundation": 20,
-        "acacha/stateful-eloquent": 20
+        "acacha/stateful-eloquent": 20,
+        "scool/ebre_escool_model": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
