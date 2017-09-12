@@ -23,7 +23,7 @@ class LessonsTest extends TestCase
      */
     public function __construct($name = null, array $data = [], $dataName = '')
     {
-        parent::__construct($name,$data, $dataName);
+        parent::__construct($name, $data, $dataName);
         $this->bootEloquent();
     }
 
@@ -48,7 +48,7 @@ class LessonsTest extends TestCase
             'prefix' => '',
             'strict' => true,
             'engine' => null,
-        ],'ebre_escool');
+        ], 'ebre_escool');
 
         $capsule->bootEloquent();
     }
@@ -64,12 +64,12 @@ class LessonsTest extends TestCase
 
         $this->assertTrue($currentAP->count() === 1);
 
-        $this->assertTrue($currentAP->first()->shortname ===  "2017-18");
-        $this->assertTrue($currentAP->first()->name ===  "2017-2018");
-        $this->assertTrue($currentAP->first()->name ===  "2017-2018");
-        $this->assertTrue($currentAP->first()->alt_name ===  "201718");
-        $this->assertTrue($currentAP->first()->initial_date ===  "2017-09-01");
-        $this->assertTrue($currentAP->first()->final_date ===  "2018-07-31");
+        $this->assertTrue($currentAP->first()->shortname === "2017-18");
+        $this->assertTrue($currentAP->first()->name === "2017-2018");
+        $this->assertTrue($currentAP->first()->name === "2017-2018");
+        $this->assertTrue($currentAP->first()->alt_name === "201718");
+        $this->assertTrue($currentAP->first()->initial_date === "2017-09-01");
+        $this->assertTrue($currentAP->first()->final_date === "2018-07-31");
     }
 
     /**
@@ -119,8 +119,8 @@ class LessonsTest extends TestCase
      */
     public function testThereIsAtLeastOneLessonAssignedToClassroomgroup($classroom)
     {
-        dd($classroom->id);
-        $lessons = Lesson::where('lesson_classroom_group_id',$classroom->id);
+        dd($classroom);
+        $lessons = Lesson::where('lesson_classroom_group_id', $classroom->id);
         $this->assertTrue($lessons->count() > 1000);
 //        => Scool\EbreEscoolModel\Lesson {#17524
 //        lesson_id: 1,
@@ -153,7 +153,32 @@ class LessonsTest extends TestCase
      */
     public function activeClassrooms()
     {
-        dd(AcademicPeriod::current()->first()->classrooms);
-        return AcademicPeriod::current()->first()->classrooms;
+//        dd(AcademicPeriod::current()->first()->classrooms);
+        $activeClassrooms = [];
+        foreach (AcademicPeriod::current()->first()->classrooms as $classroom) {
+            $activeClassrooms[$classroom->code] = [
+                $classroom
+            ];
+        }
+        return $activeClassrooms;
     }
+
+    //    /**
+//     * Teachers provider by academic period.
+//     */
+//    public function teachersTotalsProviderByAcademicPeriod()
+//    {
+//        $teachersByAP = [];
+//        foreach (\Scool\EbreEscoolModel\AcademicPeriod::all() as $academicPeriod) {
+//            $currentTeachers = Teacher::activeOn($academicPeriod->id)->get();
+//            $teachersByAP[$academicPeriod->name] = [
+//                $currentTeachers->count(),
+//                $academicPeriod->id
+//            ];
+//        }
+//        return $teachersByAP;
+//
+//    }
+
 }
+
